@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+#copied-container {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #5c991f;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  margin: -8px;
+  transition: ease 0.4s;
+}
+
+#team-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#copied-container.active {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container button {
+  cursor: pointer;
+  padding: 5px;
+  height: 52px;
+  color: #446de6;
+  background-color: #ffffff;
+  font-size: 14px;
+  width: 400px;
+  border: 1px solid #446de6;
+  border-radius: 3px;
+  transition: ease-in-out 0.2s;
+  box-shadow: rgba(67, 66, 93, 0.2) 0px 2px 2px;
+}
+
+.container button:hover {
+  background-color: #446de6;
+  color: #ffffff;
+}
+
+.container button:active {
+  background-color: #444dd4;
+}
+
+.container button.selected,
+.container button.selected:hover,
+.container button.selected:active {
+  background-color: #e66f00;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.container button.copied {
+  background-color: #5c991f;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-container input,
+.input-container select {
+  margin: 10px 10px 20px 10px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #b2b2b2;
+  width: 400px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.input-container input:first-of-type,
+.input-container input:last-of-type {
+  margin-bottom: 5px;
+}
+
+.input-container input:focus,
+.input-container input:active,
+.input-container input:hover,
+.input-container select:focus,
+.input-container select:active,
+.input-container select:hover {
+  border: 1px solid #3b5998;
+}
+
+.input-container label {
+  align-self: flex-start;
+  padding: 0 8px;
+}
+
+.input-container label.error {
+  font-size: 12px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  color: #cc2200;
+  letter-spacing: 0.7px;
+}
+
+.preview-container {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+}
+
+.preview-container iframe {
+  width: 700px;
+  height: 100%;
+  border: 0;
+}

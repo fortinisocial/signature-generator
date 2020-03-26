@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Assinatura - Fortini Investimento Social</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="iframeMessages.js"></script>
+  </head>
+  <body>
+    <div id="copied-container"></div>
+    <div class="container">
+      <div class="input-container">
+        <label>Qual é o seu nome e sobrenome?</label>
+        <input
+          id="name"
+          type="text"
+          value="Bruno Carvalho"
+          placeholder="Qual é o seu nome e sobrenome?"
+        />
+        <label id="nameError" class="error"></label>
+        <div id="team-container">
+          <label>Faz parte de qual time?</label>
+          <select id="teamName" name="teamName" onchange="updatePreview()">
+            <option value="Administração e Finanças"
+              >Administração e Finanças</option
+            >
+            <option value="Comunicação e Relacionamento"
+              >Comunicação e Relacionamento</option
+            >
+            <option value="Gente e Gestão">Gente e Gestão</option>
+            <option value="Novos Negócios e Mobilização de Recursos"
+              >Novos Negócios e Mobilização de Recursos</option
+            >
+            <option value="Operações">Operações</option>
+            <option value="Tecnologia da Informação" selected
+              >Tecnologia da Informação</option
+            >
+          </select>
+        </div>
+        <label>Qual é o seu número de telefone?</label>
+        <input
+          id="cellphone"
+          type="text"
+          value="31 98661-0770"
+          placeholder="Qual é o seu número de telefone?"
+        />
+        <label id="cellError" class="error"></label>
+      </div>
+
+      <button id="copy" type="button" class="copy">
+        Concluir
+      </button>
+
+      <div class="preview-container">
+        <iframe id="iframePreview" src="preview.html" scrolling="no" />
+      </div>
+    </div>
+    <script src="https://cdn.rawgit.com/lagden/vanilla-masker/lagden/build/vanilla-masker.min.js"></script>
+    <script src="maskInput.js"></script>
+  </body>
+</html>
