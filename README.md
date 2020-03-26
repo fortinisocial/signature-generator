@@ -1,4 +1,4 @@
 # signature-generator
-Gerador de assinaturas para os voluntários e associados
+Gerador de assinatura de e-mail para os voluntários e associados.
 
 [Visualizar](https://fortini.org.br/assinatura)
