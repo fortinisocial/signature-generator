@@ -137,3 +137,13 @@ body {
   height: 100%;
   border: 0;
 }
+
+a {
+  color: #3b5998;
+  text-decoration: none;
+  margin: 10px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
