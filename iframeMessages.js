@@ -100,6 +100,24 @@ document.addEventListener("DOMContentLoaded", function() {
     updatePreview();
   });
 
+  document.getElementById("name").addEventListener("focus", function() {
+    const name = document.getElementById("name");
+
+    if (!!name.value.match(/Bruno Carvalho/i)) {
+      name.value = "";
+    }
+  });
+
+  document.getElementById("cellphone").addEventListener("focus", function() {
+    const cellphone = document.getElementById("cellphone");
+
+    if (!!cellphone.value.match(/31 98661-0770/i)) {
+      cellphone.value = "";
+    }
+  });
+
+  document.getElementById("name").value;
+
   document.getElementById("cellphone").addEventListener("input", function() {
     const isValidCellphone =
       document.getElementById("cellphone").value.length > 13;
